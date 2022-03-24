@@ -87,7 +87,7 @@ public class AdminDao {
 		List<ViewBean> listViewTable = new ArrayList<ViewBean>();
 		Connection con = DBconnection.getConnection();
 		
-		String query = "select airline_name,airline_code from bookig_table";
+		String query = "select distinct airline_name from bookig_table";
 		try {
 			Statement st = con.createStatement();
 			ResultSet rs = st.executeQuery(query);

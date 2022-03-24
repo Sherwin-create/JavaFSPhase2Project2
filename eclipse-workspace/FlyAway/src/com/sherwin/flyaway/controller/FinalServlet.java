@@ -31,7 +31,8 @@ public class FinalServlet extends HttpServlet {
 		int noOfTicketsOrdered = Integer.parseInt(request.getParameter("noOfTickets"));
 		
 		if( noOfTicketsOrdered > tickets) {
-			System.out.println("u excedded the no. of tickets available");
+			RequestDispatcher rd = request.getRequestDispatcher("/ExceddedSeats.jsp");
+			rd.forward(request,response);
 		}
 		else {
 			int finalPrice = price * noOfTicketsOrdered;

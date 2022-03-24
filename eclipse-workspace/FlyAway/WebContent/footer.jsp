@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,26 +7,12 @@
 ul ,li {
 	list-style: none;
 }
-th,td {
-		padding: 5px;
-		margin: 2px;	
-		text-align: center;
-		text-decoration: none;
-	 }
 </style>
 <meta charset="ISO-8859-1">
-<title>FlyAway | Admin HOME</title>
+<title>Insert title here</title>
 </head>
 <body align="center">
-
-	<div>
-		<h1>Hey admin!</h1>
-		<button><a href="AdminResetPassword.html">Reset Your password</a></button>
-		<hr>
-		<a href="index.html">Home</a>
-	</div>
-
-<div>
+<hr>
 <nav>
 <ul>
 	<li><a href="DestinSource.jsp">View Source and Destination of Flights</a></li>
@@ -32,6 +20,6 @@ th,td {
 	<li><a href="FlightTimeTable.jsp">List all the flights</a></li>
 </ul>
 </nav>
-</div>
+***********************************
 </body>
 </html>

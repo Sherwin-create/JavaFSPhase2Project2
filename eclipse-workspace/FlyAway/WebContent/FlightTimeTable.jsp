@@ -20,10 +20,11 @@
 <title>Insert title here</title>
 </head>
 <body>
+<jsp:include page="header.jsp" />
 	<%AdminService service = new AdminService(); %>
 	<%List<ViewBean> listOfSourceDestination = (List<ViewBean>) service.listFlights();%>
 	<div>
-		<table border="1px">
+		<table border="1px" align="center">
 			<tr>
 				<th>Source</th>
 				<th>Destination</th>
@@ -47,5 +48,6 @@
 			%>
 		</table>
 	</div>
+	<jsp:include page="footer.jsp" />
 </body>
 </html>

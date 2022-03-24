@@ -3,17 +3,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style type="text/css">
+th,td {
+		padding: 5px;
+		margin: 2px;	
+		text-align: center;
+	 }
+</style>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
-
+<jsp:include page="HeaderView.jsp" />
 	<%String email = request.getParameter("email");
-		String name = request.getParameter("cName");
-		/* int age = Integer.parseInt(request.getParameter("age")); */
-		String gender = request.getParameter("gender");
-		String address = request.getParameter("address");
-		String country = request.getParameter("country");
+		String name = (String) session.getAttribute("name");
+		String gender = (String) session.getAttribute("gender");
+		String country = (String) session.getAttribute("country");
 	%>
 	<%
 		int flightNo = (int) session.getAttribute("flightDetailsObj");
@@ -25,7 +30,7 @@
 		int price = (int) session.getAttribute("price");
 	%>
 	<form>
-		<table border="1px">
+		<table border="1px" align="center">
 		<h2 style="color:green;">Your ticket is confirmed</h2>
 			<tr>
 				<td colspan="5">Flight No: <%=flightNo %></td>

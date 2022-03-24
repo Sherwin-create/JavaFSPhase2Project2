@@ -3,18 +3,98 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Fly Away | HOME</title>
+<style type="text/css">
+	* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: center;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height:2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+th,td {
+		padding: 5px;
+		margin: 2px;	
+		text-align: center;
+	 }
+	 
+ h1 {
+	 	font-size:40px;
+	 	color: 
+	 }
+</style>
 </head>
 <body>
+<section class="header">
+<nav>
+	<div class="nav-links">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="AdminLogin.html">ADMIN LOGIN</a></li>
+       </ul>
+    </div>
+</nav>	
 <form action="ViewServlet" method="get">
 <div align="center">
-<h1>Welcome to flyAway</h1>
-<p>fly like you are on a Nirvana</p>
+<h1 class="flyaway">Welcome to FlyAway</h1>
+<br>
+<p>Your one stop flight booking site</p>
+<br>
 <hr>
+<br>
+<br>
 	<table>
 		<tr>
 			<th>Source
 			<select name="source">
-				<option value="NoSource">Select Source</option>
+				<option >Select Source</option>
 				<option value="Bangalore">Bangalore</option>
 				<option value="Mumbai">Mumbai</option>
 				<option value="Mangalore">Mangalore</option>
@@ -22,10 +102,9 @@
 				<option value="Kochin">Kochin</option> 
 			</select> &#8640;
 			</th>
-			
 			<th>Destination
 			 <select name="destination">
-			 	<option value="NoDestination">Select Destination</option>
+			 	<option>Select Destination</option>
 				<option value="Delhi">Delhi</option>
 				<option value="Amritsar">Amritsar</option>
 				<option value="Jaipur">Jaipur</option>
@@ -33,9 +112,11 @@
 				<option value="Kolkata">Kolkata</option> 
 			</select>
 			</th>
-			
-			<th>ticket :
-				<input type="text" name="tickets">
+		</tr>
+		
+		<tr>
+			<th>No. of person :
+				<input type="text" name="tickets" required>
 			</th>
 			
 			<td>date : 
@@ -50,6 +131,6 @@
 	</table>
 </div>
 </form> 
-
+</section>
 </body>
 </html>

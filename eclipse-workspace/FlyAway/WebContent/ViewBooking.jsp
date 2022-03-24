@@ -12,14 +12,17 @@
 		margin: 2px;	
 		text-align: center;
 	 }
-	
+	table {
+		align: center;
+	}
 
 </style>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 
 </head>
-<body>
+<body >
+<jsp:include page="HeaderView.jsp" />
 <form method="get" action="ViewServletBooking">
 	<div align="center">
 		<h2>Available Flights</h2>
@@ -28,7 +31,7 @@
 	<% List<ViewBean> bean = (List<ViewBean>) request.getAttribute("viewObj");%>
 	<%int count=0; %>
 	
-	<table align="center" border="1px">
+	<table  border="1px">
 	<tr>
 		<th>FlightNo.</th>
 		<th>Source</th>

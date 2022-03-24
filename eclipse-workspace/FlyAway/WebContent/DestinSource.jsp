@@ -6,15 +6,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style type="text/css">
+	th,td {
+		padding: 5px;
+		margin: 2px;	
+		text-align: center;
+	 }
+</style>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Source Destination</title>
 </head>
 <body>
+<jsp:include page="header.jsp" />
 	<%AdminService service = new AdminService(); %>
 	<%List<ViewBean> listOfSourceDestination = (List<ViewBean>) service.sourceDestination();%>
 	
 	<div>
-		<table>
+		<table border="2px" align="center">
+		<caption><h3>Source and Destination of all flights</h3></caption>
 			<tr>
 				<th>Source</th>
 				<th>Destination</th>
@@ -32,7 +41,9 @@
 			<%
 				}
 			%>
+			
 		</table>
 	</div>
+	<jsp:include page="footer.jsp" />
 </body>
 </html>

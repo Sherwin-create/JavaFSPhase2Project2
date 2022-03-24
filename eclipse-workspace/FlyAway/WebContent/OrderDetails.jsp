@@ -18,14 +18,17 @@
 </head>
 <body>
 <!-- redirected from customerDetails.jsp -->
-	  
-	
 	<%String email = request.getParameter("email");
 		String name = request.getParameter("cName");
 		/* int age = Integer.parseInt(request.getParameter("age")); */
 		String gender = request.getParameter("gender");
 		String address = request.getParameter("address");
 		String country = request.getParameter("country");
+	%>
+	<%
+	session.setAttribute("name",name );
+	session.setAttribute("gender",gender );
+	session.setAttribute("country",country );
 	%>
 	<%
 		int flightNo = (int) session.getAttribute("flightDetailsObj");
@@ -38,13 +41,13 @@
 	%>
 	
 	<form method="post" action ="FinalServlet">
-		<table border="1px">
-			<caption>Booking Confirmation</caption>
+		<table border="1px" align="center">
+			<caption style="color:green;"><h2>Confirm your booking</h2></caption>
 			<tr>
 				<td colspan="5">Flight No: <%=flightNo %></td>
 			</tr>
 			<tr >
-				<td colspan="5">Personal information</td>
+				<td colspan="5" style="background-color:#81e695;">Personal information</td>
 			</tr>
 			<tr>
 				<td>Name: <%=name%></td>
@@ -54,7 +57,7 @@
 				<td>Address : <%=address%></td>
 			</tr>
 			<tr>
-				<td colspan="5">Flight Information</td>
+				<td colspan="5"  style="background-color:#81e695;">Flight Information</td>
 			</tr>
 		
 			<tr>
@@ -68,8 +71,8 @@
 				<td>Price Per Tickets: <%=price %>
 			</tr>
 			<tr>
-				<td> No. of Tickets you want to book</td>
-				<td><input type="text" name="noOfTickets"></td>
+				<td style="color:red;"> No. of Tickets you want to book: 
+				<input type="text" name="noOfTickets"></td>
 				<td><input type ="submit"></td>
 			</tr>
 
