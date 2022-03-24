@@ -51,7 +51,7 @@
 				<td><%=viewbean.getFlightNo() %>
 				<td><%=viewbean.getSource() %></td>
 				<td><%=viewbean.getDestination() %></td>
-				<td><%=viewbean.getTravelDate() %>
+				<td><%=viewbean.getTravelDate().substring(0,10) %>
 				<td><%=viewbean.getTickets() %>
 				<td><%=viewbean.getPrice() %>
 				<td><%=viewbean.getAirlineName() %></td>

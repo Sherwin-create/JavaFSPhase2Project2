@@ -39,7 +39,7 @@ public class ViewServlet extends HttpServlet {
 			beanFromUser.setSource(source);
 			beanFromUser.setDestination(destination);
 			beanFromUser.setTickets(tickets);
-			//beanFromUser.setTravelDate(travelDate);
+			beanFromUser.setTravelDate(travelDate);
 			List<ViewBean> listOfResult = service.search(beanFromUser);
 		
 			if(listOfResult.isEmpty()) {

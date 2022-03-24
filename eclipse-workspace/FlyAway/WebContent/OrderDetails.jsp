@@ -67,11 +67,11 @@
 			</tr>
 			<tr>
 				<th colspan="3">Travel Date: <%=travelDate %></th>
-				<td>Tickets Available : <%=tickets %></td>
+				<td> Available Seats : <%=tickets %></td>
 				<td>Price Per Tickets: <%=price %>
 			</tr>
 			<tr>
-				<td style="color:red;"> No. of Tickets you want to book: 
+				<td style="color:red;"> No. of seats you want to book: 
 				<input type="text" name="noOfTickets"></td>
 				<td><input type ="submit"></td>
 			</tr>

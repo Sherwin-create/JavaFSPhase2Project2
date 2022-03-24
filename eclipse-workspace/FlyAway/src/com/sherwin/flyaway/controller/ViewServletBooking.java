@@ -33,7 +33,7 @@ public class ViewServletBooking extends HttpServlet {
 			int flightNoDao = result.getFlightNo();
 			String source = result.getSource();
 			String destination = result.getDestination();
-			String travelDate = result.getTravelDate();
+			String travelDate = result.getTravelDate().substring(0,10);
 			int tickets = result.getTickets();
 			String airlineName = result.getAirlineName();
 			int price = result.getPrice();
