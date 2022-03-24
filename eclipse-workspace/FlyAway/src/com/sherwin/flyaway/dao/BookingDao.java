@@ -75,8 +75,8 @@ public class BookingDao {
 		
 	}
 	
-	public  List<ViewBean> viewDetails(int flightNo) {
-		List<ViewBean> listViewTable = new ArrayList<ViewBean>();
+	public  ViewBean viewDetails(int flightNo) {
+		ViewBean bean = new ViewBean();
 		Connection con = DBconnection.getConnection();
 		
 		String query = "select * from bookig_table where flight_no = "+ flightNo;
@@ -86,9 +86,7 @@ public class BookingDao {
 			
 			System.out.println(query);
 			
-			while(rs.next()) {
-				ViewBean bean = new ViewBean();
-				
+			if(rs.next()) {
 				bean.setSource((rs.getString(1)));
 				bean.setDestination((rs.getString(2)));
 				bean.setTravelDate((rs.getString(3)));
@@ -96,13 +94,12 @@ public class BookingDao {
 				bean.setPrice(rs.getInt(5));
 				bean.setAirlineName(rs.getString(6));
 				bean.setFlightNo(rs.getInt(7));
-				listViewTable.add((bean));
 			}
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return listViewTable;
+		return bean;
 	}
 //	public static void main(String args[]) throws ClassNotFoundException, SQLException {
 //		System.out.println("main");

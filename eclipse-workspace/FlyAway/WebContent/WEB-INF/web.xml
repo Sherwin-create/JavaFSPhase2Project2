@@ -49,4 +49,14 @@
     <servlet-name>ViewServletBooking</servlet-name>
     <url-pattern>/ViewServletBooking</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FinalServlet</display-name>
+    <servlet-name>FinalServlet</servlet-name>
+    <servlet-class>com.sherwin.flyaway.controller.FinalServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FinalServlet</servlet-name>
+    <url-pattern>/FinalServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

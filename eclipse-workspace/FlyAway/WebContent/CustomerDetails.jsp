@@ -36,9 +36,8 @@
 				</tr>
 				<tr>
 					<td><label for="addr">Address</label></td>
-					<td><textarea id="addr" name="address" rows="4" cols="50">
-						enter your permanent address here
-					</textarea>
+					<td>
+						<textarea id="addr" name="address" rows="4" cols="50"></textarea>
 					</td>
 				</tr>
 				<tr>

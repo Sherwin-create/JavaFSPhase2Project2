@@ -23,14 +23,28 @@ public class ViewServletBooking extends HttpServlet {
 		int flightNo = Integer.parseInt(request.getParameter("btn-book"));
 		HttpSession session = request.getSession();
 		ViewService service = new ViewService();
-		List<ViewBean> listOfResult = service.viewAllDetails(flightNo);
+		ViewBean result = service.viewAllDetails(flightNo);
 		
-		if(listOfResult.isEmpty()) {
+		if(result==null) {
 			RequestDispatcher rd = request.getRequestDispatcher("/NoRoute.html");
 			rd.forward(request,response);
 		}
 		else {
-			session.setAttribute("flightDetailsObj",flightNo );
+			int flightNoDao = result.getFlightNo();
+			String source = result.getSource();
+			String destination = result.getDestination();
+			String travelDate = result.getTravelDate();
+			int tickets = result.getTickets();
+			String airlineName = result.getAirlineName();
+			int price = result.getPrice();
+			
+			session.setAttribute("flightDetailsObj",flightNoDao );
+			session.setAttribute("source",source );
+			session.setAttribute("destination",destination );
+			session.setAttribute("travelDate",travelDate );
+			session.setAttribute("tickets",tickets );
+			session.setAttribute("airlineName",airlineName );
+			session.setAttribute("price",price );
 			//send to CustomerDetails.jsp and view all the flight details + the form
 			RequestDispatcher rd = request.getRequestDispatcher("/CustomerDetails.jsp");
 			rd.forward(request,response);

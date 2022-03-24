@@ -16,7 +16,7 @@ public class ViewService {
 		return dao.viewTable(beanFromUser);
 	}
 	
-	public List<ViewBean> viewAllDetails(int flightNo) {
+	public ViewBean viewAllDetails(int flightNo) {
 		return dao.viewDetails(flightNo);
 	}
 }
