@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Fly Away | HOME</title>
+</head>
+<body>
+<form action="ViewServlet" method="get">
+<div align="center">
+<h1>Welcome to flyAway</h1>
+<p>fly like you are on a Nirvana</p>
+<hr>
+	<table>
+		<tr>
+			<th>Source
+			<select name="source">
+				<option value="NoSource">Select Source</option>
+				<option value="Bangalore">Bangalore</option>
+				<option value="Mumbai">Mumbai</option>
+				<option value="Mangalore">Mangalore</option>
+				<option value="Chennai">Chennai</option>
+				<option value="Kochin">Kochin</option> 
+			</select> &#8640;
+			</th>
+			
+			<th>Destination
+			 <select name="destination">
+			 	<option value="NoDestination">Select Destination</option>
+				<option value="Delhi">Delhi</option>
+				<option value="Amritsar">Amritsar</option>
+				<option value="Jaipur">Jaipur</option>
+				<option value="Lucknow">Lucknow</option>
+				<option value="Kolkata">Kolkata</option> 
+			</select>
+			</th>
+			
+			<th>ticket :
+				<input type="text" name="tickets">
+			</th>
+			
+			<td>date : 
+				<input type ="date" name ="travelDate" placeholder="dd-mon-yyyy">
+			</td>
+		</tr>
+		
+		<tr>
+			<td><input class="btn" type="submit" name="btn" value="search"></td>
+			<td><input class="btn" type="reset"></td>
+		</tr>	
+	</table>
+</div>
+</form> 
+
+</body>
+</html>
