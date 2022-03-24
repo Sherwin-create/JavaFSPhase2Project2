@@ -25,7 +25,7 @@
 			%>
 			<tr>
 				<td><%=viewbean.getAirlineName() %></td>
-				<td><%=viewbean.getAirlineCode() %></td>
+				<%-- <td><%=viewbean.getAirlineCode() %></td> --%>
 			</tr>
 			<%
 				}

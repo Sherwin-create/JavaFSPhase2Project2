@@ -74,6 +74,36 @@ public class BookingDao {
 		return listViewTable;
 		
 	}
+	
+	public  List<ViewBean> viewDetails(int flightNo) {
+		List<ViewBean> listViewTable = new ArrayList<ViewBean>();
+		Connection con = DBconnection.getConnection();
+		
+		String query = "select * from bookig_table where flight_no = "+ flightNo;
+		try {
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery(query);
+			
+			System.out.println(query);
+			
+			while(rs.next()) {
+				ViewBean bean = new ViewBean();
+				
+				bean.setSource((rs.getString(1)));
+				bean.setDestination((rs.getString(2)));
+				bean.setTravelDate((rs.getString(3)));
+				bean.setTickets((rs.getInt(4)));
+				bean.setPrice(rs.getInt(5));
+				bean.setAirlineName(rs.getString(6));
+				bean.setFlightNo(rs.getInt(7));
+				listViewTable.add((bean));
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return listViewTable;
+	}
 //	public static void main(String args[]) throws ClassNotFoundException, SQLException {
 //		System.out.println("main");
 //		BookingDao dao = new BookingDao();

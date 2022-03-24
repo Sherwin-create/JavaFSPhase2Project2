@@ -20,6 +20,7 @@
 
 </head>
 <body>
+<form method="get" action="ViewServletBooking">
 	<div align="center">
 		<h2>Available Flights</h2>
 		<hr>
@@ -60,6 +61,8 @@
 	<%
 		/* session.setAttribute("bookNow", btn-book); */
 	%>
+	
 	</table>
+</form>
 </body>
 </html>
